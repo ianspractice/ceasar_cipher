@@ -10,10 +10,9 @@ end
 
 def shift(letter, shift)
   initial_index = letter_index(letter)
-  new_index = initial_index + shift
+  new_index = initial_index - 26 + (shift % 26)
   new_letter = new_letter(new_index)
   p new_letter
 end
 
-shift("l", 5)
-
+shift("a", 3)
