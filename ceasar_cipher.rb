@@ -1,11 +1,19 @@
-
-def shift_one(letter, shift)
+def letter_index(letter)
   alpha = ("a".."z").to_a
-  initial_index = alpha.index(letter)
+  alpha.index(letter)
+end
+
+def new_letter(index)
+  alpha = ("a".."z").to_a
+  alpha[index]
+end
+
+def shift(letter, shift)
+  initial_index = letter_index(letter)
   new_index = initial_index + shift
-  new_letter = alpha[new_index]
+  new_letter = new_letter(new_index)
   p new_letter
 end
 
-shift_one("l", 5)
+shift("l", 5)
 
