@@ -8,11 +8,16 @@ def new_letter(index)
   alpha[index]
 end
 
-def shift(letter, shift)
+def shift(word, shift)
+  array = word.split("")
+  new_array = []
+  array.map do |letter|
   initial_index = letter_index(letter)
   new_index = initial_index - 26 + (shift % 26)
   new_letter = new_letter(new_index)
-  p new_letter
+  new_array.push(new_letter)
+  end
+  p new_array
 end
 
-shift("a", 3)
+shift("abcde", 27)
