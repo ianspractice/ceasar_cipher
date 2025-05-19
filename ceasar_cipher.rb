@@ -23,8 +23,8 @@ def letter_shift_up(letter, shift)
   new_letter.upcase
 end
 
-def shift(phrase, shift)
-  array = phrase.split("")
+def shift(string, shift)
+  array = string.split("")
   new_array = []
   array.map do |letter|
     if letter.match(/[^a-zA-z]/)
@@ -36,8 +36,8 @@ def shift(phrase, shift)
     end
   new_array.push(new_letter)
   end
-  new_phrase = new_array.join("")
-  p new_phrase
+  new_string = new_array.join("")
+  p new_string
 end
 
 shift("Aapple?? 888 *** ButtTTR!!", 27)
