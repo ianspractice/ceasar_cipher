@@ -11,7 +11,7 @@ end
 def letter_shift(letter, shift)
   down_letter = letter.downcase
   initial_index = letter_index(down_letter)
-  new_index = initial_index - 26 + (shift % 26)
+  new_index = (initial_index + shift) % 26
   new_letter = new_letter(new_index)
   new_letter
 end
@@ -32,4 +32,4 @@ def shift(string, shift)
   new_string
 end
 
-puts shift("abcdef ABCDEF 1234 !*?{}", 27)
+puts shift("abcdef xyz ABCDEF XYZ 1234 !*?{}", 27)
